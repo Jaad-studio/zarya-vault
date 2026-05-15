@@ -27,7 +27,7 @@ const translations = {
     watch1_brand: "116519LN - 2020 Full Set",
     watch2_title: "Cosmic Gold",
     watch2_brand: "Or Massif 18k - Chronographe",
-    btn_request: "Demander l'Accès",
+    btn_request: "Nous Contacter",
     btn_our_watches: "Nos Montres",
     trust_title: "Standards Internationaux",
     trust_1: "Trusted Seller Chrono24",
@@ -81,7 +81,7 @@ const translations = {
     watch1_brand: "116519LN - 2020 Full Set",
     watch2_title: "Cosmic Gold",
     watch2_brand: "Solid 18k - Chronograph",
-    btn_request: "Request Access",
+    btn_request: "Contact Us",
     btn_our_watches: "Our Watches",
     trust_title: "Global Standards",
     trust_1: "Chrono24 Trusted Seller",
@@ -133,7 +133,7 @@ const translations = {
     watch1_brand: "116519LN - طقم كامل 2020",
     watch2_title: "كوزميك جولد",
     watch2_brand: "ذهب خالص عيار 18 - كرونوغراف",
-    btn_request: "طلب وصول",
+    btn_request: "اتصل بنا",
     btn_our_watches: "ساعاتنا",
     trust_title: "معايير عالمية",
     trust_1: "بائع معتمد في Chrono24",
@@ -369,7 +369,7 @@ function App() {
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch1_title}</h3>
                   <p className="watch-brand">{t.watch1_brand}</p>
-                  <button onClick={() => setIsSourcingOpen(true)} className="watch-link btn-text" style={{padding:0}}>{t.btn_request} <ChevronRight size={16}/></button>
+                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch1_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
                 </div>
               </motion.div>
               
@@ -389,7 +389,7 @@ function App() {
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch2_title}</h3>
                   <p className="watch-brand">{t.watch2_brand}</p>
-                  <button onClick={() => setIsSourcingOpen(true)} className="watch-link btn-text" style={{padding:0}}>{t.btn_request} <ChevronRight size={16}/></button>
+                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch2_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
                 </div>
               </motion.div>
             </div>
