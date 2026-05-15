@@ -25,8 +25,8 @@ const translations = {
     collection_desc: "Un aperçu confidentiel de nos pièces actuellement sous voûte.",
     watch1_title: "Rolex Daytona 'Panda'",
     watch1_brand: "116519LN - 2020 Full Set + Rubber B offert",
-    watch2_title: "Cosmic Gold",
-    watch2_brand: "Or Massif 18k - Chronographe",
+    watch2_title: "Rolex Datejust 41",
+    watch2_brand: "2023 Full Set - Cadran Motif Cannelé",
     btn_request: "Nous Contacter",
     btn_our_watches: "Nos Montres",
     trust_title: "Standards Internationaux",
@@ -79,8 +79,8 @@ const translations = {
     collection_desc: "A confidential glimpse into the pieces currently in our vault.",
     watch1_title: "Rolex Daytona 'Panda'",
     watch1_brand: "116519LN - 2020 Full Set + Free Rubber B Strap",
-    watch2_title: "Cosmic Gold",
-    watch2_brand: "Solid 18k - Chronograph",
+    watch2_title: "Rolex Datejust 41",
+    watch2_brand: "2023 Full Set - Fluted Motif Dial",
     btn_request: "Contact Us",
     btn_our_watches: "Our Watches",
     trust_title: "Global Standards",
@@ -131,8 +131,8 @@ const translations = {
     collection_desc: "لمحة سرية عن القطع الموجودة حالياً في خزينتنا.",
     watch1_title: "رولكس دايتونا باندا",
     watch1_brand: "116519LN - طقم كامل 2020 + حزام Rubber B مجاني",
-    watch2_title: "كوزميك جولد",
-    watch2_brand: "ذهب خالص عيار 18 - كرونوغراف",
+    watch2_title: "رولكس ديت جست 41",
+    watch2_brand: "طقم كامل 2023 - مينا مخدد",
     btn_request: "اتصل بنا",
     btn_our_watches: "ساعاتنا",
     trust_title: "معايير عالمية",
@@ -384,7 +384,7 @@ function App() {
                 className="watch-card offset-card dark-card"
               >
                 <motion.div style={{ y: yParallax2 }} className="watch-img-container">
-                  <img src="/watch_light_2.png" alt="Watch 2" className="dark-img-filter" />
+                  <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch2_title}</h3>
