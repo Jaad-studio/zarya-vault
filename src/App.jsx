@@ -175,7 +175,7 @@ function App() {
   return (
     <div className={`app-container ${lang === 'ar' ? 'rtl-layout' : ''}`}>
       <header className="header glass-dark">
-        <div className="logo">ZARYA</div>
+        <div className="logo">ZARYA VAULT</div>
         <nav className="nav">
           <a href="#concept">{t.nav_concept}</a>
           <a href="#collection">{t.nav_collection}</a>
@@ -343,7 +343,7 @@ function App() {
       <footer id="contact" className="footer">
         <div className="container footer-content">
           <div className="footer-brand">
-            <h2>ZARYA</h2>
+            <h2>ZARYA VAULT</h2>
             <p>{t.footer_desc}</p>
           </div>
           <div className="footer-links">
