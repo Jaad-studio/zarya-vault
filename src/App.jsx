@@ -23,8 +23,8 @@ const translations = {
     feature2_desc: "Des transactions hautement confidentielles, soutenues par une logistique blindée et assurée à 100%.",
     collection_title: "Off-Market",
     collection_desc: "Un aperçu confidentiel de nos pièces actuellement sous voûte.",
-    watch1_title: "Emerald 'Jumbo'",
-    watch1_brand: "Acier Intégré - Automatique",
+    watch1_title: "Rolex Daytona 'Panda'",
+    watch1_brand: "116519LN - 2020 Full Set",
     watch2_title: "Cosmic Gold",
     watch2_brand: "Or Massif 18k - Chronographe",
     btn_request: "Demander l'Accès",
@@ -77,8 +77,8 @@ const translations = {
     feature2_desc: "Highly confidential transactions, backed by armored logistics and fully insured worldwide.",
     collection_title: "Off-Market",
     collection_desc: "A confidential glimpse into the pieces currently in our vault.",
-    watch1_title: "Emerald 'Jumbo'",
-    watch1_brand: "Integrated Steel - Automatic",
+    watch1_title: "Rolex Daytona 'Panda'",
+    watch1_brand: "116519LN - 2020 Full Set",
     watch2_title: "Cosmic Gold",
     watch2_brand: "Solid 18k - Chronograph",
     btn_request: "Request Access",
@@ -129,8 +129,8 @@ const translations = {
     feature2_desc: "معاملات سرية للغاية، مدعومة بلوجستيات مصفحة ومؤمنة بالكامل حول العالم.",
     collection_title: "خارج السوق الأساسي",
     collection_desc: "لمحة سرية عن القطع الموجودة حالياً في خزينتنا.",
-    watch1_title: "إيميرالد جامبو",
-    watch1_brand: "صلب متكامل - أوتوماتيك",
+    watch1_title: "رولكس دايتونا باندا",
+    watch1_brand: "116519LN - طقم كامل 2020",
     watch2_title: "كوزميك جولد",
     watch2_brand: "ذهب خالص عيار 18 - كرونوغراف",
     btn_request: "طلب وصول",
@@ -364,7 +364,7 @@ function App() {
                 className="watch-card dark-card"
               >
                 <motion.div style={{ y: yParallax1 }} className="watch-img-container">
-                  <img src="/watch_light_1.png" alt="Watch 1" className="dark-img-filter" />
+                  <img src="/daytona.png" alt="Rolex Daytona Panda" className="dark-img-filter" />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch1_title}</h3>
