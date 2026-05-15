@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
 
 :root {
   --color-bg-dark: #004225; /* Dark Rolex Green */
@@ -8,7 +8,7 @@
   --color-accent: #d4af37; /* Gold Accent for contrast */
   --color-border: #005a33;
   
-  --font-heading: 'Outfit', sans-serif;
+  --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 }
 

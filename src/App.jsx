@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { Lock, Shield, Watch, ChevronRight, ArrowRight, CheckCircle2, X, UploadCloud, Globe } from 'lucide-react'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect, useRef } from 'react'
+import { Lock, Shield, Watch, ChevronRight, ArrowRight, CheckCircle2, X, UploadCloud, Globe, Search } from 'lucide-react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import './App.css'
 
 // --- TRANSLATIONS ---
@@ -36,7 +36,7 @@ const translations = {
     footer_desc: "Cabinet privé de conseil et courtage en Haute Horlogerie.",
     footer_contact: "Contact Conciergerie",
     footer_links: "Liens Officiels",
-    // Form
+    // Form Estimate
     form_title: "Demander une Expertise",
     form_step1: "Manufacture",
     form_step2: "Référence exacte de la pièce",
@@ -51,7 +51,13 @@ const translations = {
     set_full: "Full Set (Boîte d'origine & Certificats)",
     set_box: "Boîte uniquement",
     set_naked: "Montre seule",
-    upload_text: "Cliquez pour déposer vos clichés HD"
+    upload_text: "Cliquez pour déposer vos clichés HD",
+    // Form Sourcing
+    btn_sourcing: "Sourcing Privé",
+    sourcing_title: "Recherche Hors-Marché",
+    sourcing_desc: "Confiez-nous la référence exacte de la pièce introuvable que vous désirez. Notre réseau privé vous la sourcera dans les plus brefs délais.",
+    sourcing_placeholder: "Ex: Audemars Piguet Royal Oak 15500ST",
+    sourcing_btn_submit: "Lancer la recherche"
   },
   en: {
     nav_concept: "The Expertise",
@@ -98,7 +104,12 @@ const translations = {
     set_full: "Full Set (Original Box & Papers)",
     set_box: "Box Only",
     set_naked: "Watch Only",
-    upload_text: "Click to upload HD imagery"
+    upload_text: "Click to upload HD imagery",
+    btn_sourcing: "Private Sourcing",
+    sourcing_title: "Off-Market Request",
+    sourcing_desc: "Provide us with the exact reference of the elusive piece you desire. Our private network will source it for you promptly.",
+    sourcing_placeholder: "Ex: Audemars Piguet Royal Oak 15500ST",
+    sourcing_btn_submit: "Initiate Search"
   },
   ar: {
     nav_concept: "الخبرة",
@@ -145,23 +156,42 @@ const translations = {
     set_full: "مجموعة كاملة (العلبة الأصلية والشهادات)",
     set_box: "العلبة فقط",
     set_naked: "الساعة فقط",
-    upload_text: "انقر لتحميل صور عالية الدقة"
+    upload_text: "انقر لتحميل صور عالية الدقة",
+    btn_sourcing: "البحث الخاص",
+    sourcing_title: "طلب خارج السوق",
+    sourcing_desc: "زودنا بالرقم المرجعي الدقيق للقطعة النادرة التي ترغب بها. ستقوم شبكتنا الخاصة بتوفيرها لك في أسرع وقت.",
+    sourcing_placeholder: "مثال: Audemars Piguet Royal Oak 15500ST",
+    sourcing_btn_submit: "بدء البحث"
   }
 }
 
-// Custom Cursor Removed
-
 function App() {
+  const [loading, setLoading] = useState(true)
   const [lang, setLang] = useState('fr')
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isSourcingOpen, setIsSourcingOpen] = useState(false)
+  
   const [formStep, setFormStep] = useState(1)
   const [formData, setFormData] = useState({ brand: '', model: '', condition: '', email: '', phone: '' })
+  const [sourcingData, setSourcingData] = useState({ reference: '', email: '', phone: '' })
+
+  const collectionRef = useRef(null)
+  const { scrollYProgress } = useScroll({ target: collectionRef, offset: ["start end", "end start"] })
+  const yParallax1 = useTransform(scrollYProgress, [0, 1], [0, -100])
+  const yParallax2 = useTransform(scrollYProgress, [0, 1], [0, -150])
 
   const t = translations[lang]
 
   useEffect(() => {
     document.body.dir = lang === 'ar' ? 'rtl' : 'ltr'
   }, [lang])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1800) // 1.8s Cinematic Vault Entry
+    return () => clearTimeout(timer)
+  }, [])
 
   const nextStep = () => setFormStep(prev => Math.min(prev + 1, 5))
   const prevStep = () => setFormStep(prev => Math.max(prev - 1, 1))
@@ -172,8 +202,28 @@ function App() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   }
 
+  if (loading) {
+    return (
+      <div className="preloader">
+        <motion.h1 
+          initial={{ opacity: 0, scale: 0.9, letterSpacing: "0.2em" }}
+          animate={{ opacity: 1, scale: 1, letterSpacing: "0.4em" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="preloader-text"
+        >
+          ZARYA VAULT
+        </motion.h1>
+      </div>
+    )
+  }
+
   return (
-    <div className={`app-container ${lang === 'ar' ? 'rtl-layout' : ''}`}>
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className={`app-container ${lang === 'ar' ? 'rtl-layout' : ''}`}
+    >
       <header className="header glass-dark">
         <div className="logo">ZARYA VAULT</div>
         <nav className="nav">
@@ -213,9 +263,9 @@ function App() {
           
           <div className="hero-content">
             <motion.h1 
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
+              transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
               className="hero-huge-title"
             >
               ZARYA
@@ -223,7 +273,7 @@ function App() {
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
+              transition={{ delay: 0.8, duration: 1 }}
               className="hero-subtitle-centered"
             >
               {t.hero_subtitle}
@@ -231,15 +281,15 @@ function App() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
+              transition={{ delay: 1.1, duration: 0.8 }}
               className="hero-cta" 
               style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'}}
             >
-              <button onClick={() => setIsModalOpen(true)} className="btn btn-primary btn-large">
-                {t.nav_estimate} <ArrowRight size={20} />
+              <button onClick={() => setIsSourcingOpen(true)} className="btn btn-primary btn-large">
+                <Search size={20} /> {t.btn_sourcing}
               </button>
-              <button onClick={() => {}} className="btn btn-large" style={{background: 'rgba(255,255,255,0.05)', color: '#fff', border: '1px solid rgba(255,255,255,0.1)'}}>
-                {t.btn_our_watches}
+              <button onClick={() => setIsModalOpen(true)} className="btn btn-large" style={{background: 'rgba(255,255,255,0.05)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)'}}>
+                {t.nav_estimate} <ArrowRight size={20} />
               </button>
             </motion.div>
           </div>
@@ -289,7 +339,7 @@ function App() {
         </section>
 
         {/* COLLECTION SECTION */}
-        <section id="collection" className="section collection-section">
+        <section id="collection" ref={collectionRef} className="section collection-section">
           <div className="container">
             <motion.div 
               initial="hidden"
@@ -310,13 +360,13 @@ function App() {
                 variants={fadeUpVariant}
                 className="watch-card dark-card"
               >
-                <div className="watch-img-container">
+                <motion.div style={{ y: yParallax1 }} className="watch-img-container">
                   <img src="/watch_light_1.png" alt="Watch 1" className="dark-img-filter" />
-                </div>
+                </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch1_title}</h3>
                   <p className="watch-brand">{t.watch1_brand}</p>
-                  <a href="#contact" className="watch-link">{t.btn_request} <ChevronRight size={16}/></a>
+                  <button onClick={() => setIsSourcingOpen(true)} className="watch-link btn-text" style={{padding:0}}>{t.btn_request} <ChevronRight size={16}/></button>
                 </div>
               </motion.div>
               
@@ -330,13 +380,13 @@ function App() {
                 }}
                 className="watch-card offset-card dark-card"
               >
-                <div className="watch-img-container">
+                <motion.div style={{ y: yParallax2 }} className="watch-img-container">
                   <img src="/watch_light_2.png" alt="Watch 2" className="dark-img-filter" />
-                </div>
+                </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch2_title}</h3>
                   <p className="watch-brand">{t.watch2_brand}</p>
-                  <a href="#contact" className="watch-link">{t.btn_request} <ChevronRight size={16}/></a>
+                  <button onClick={() => setIsSourcingOpen(true)} className="watch-link btn-text" style={{padding:0}}>{t.btn_request} <ChevronRight size={16}/></button>
                 </div>
               </motion.div>
             </div>
@@ -366,7 +416,7 @@ function App() {
         </div>
       </footer>
 
-      {/* ESTIMATE MODAL */}
+      {/* ESTIMATE MODAL (SELL/APPRAISAL) */}
       {isModalOpen && (
         <div className="modal-overlay">
           <motion.div 
@@ -484,7 +534,61 @@ function App() {
           </motion.div>
         </div>
       )}
-    </div>
+
+      {/* SOURCING MODAL (BUY/FIND) */}
+      {isSourcingOpen && (
+        <div className="modal-overlay">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="modal-content glass-dark-modal"
+          >
+            <button className="modal-close" onClick={() => setIsSourcingOpen(false)}>
+              <X size={24} />
+            </button>
+            
+            <div className="modal-header">
+              <h2>{t.sourcing_title}</h2>
+              <p style={{color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '0.5rem'}}>{t.sourcing_desc}</p>
+            </div>
+
+            <div className="modal-body" style={{ minHeight: 'auto' }}>
+              <div className="form-step slide-in">
+                <input 
+                  type="text" 
+                  placeholder={t.sourcing_placeholder}
+                  className="form-input"
+                  value={sourcingData.reference}
+                  onChange={(e) => setSourcingData({...sourcingData, reference: e.target.value})}
+                />
+                <input 
+                  type="email" 
+                  placeholder={t.form_placeholder_email}
+                  className="form-input"
+                  value={sourcingData.email}
+                  onChange={(e) => setSourcingData({...sourcingData, email: e.target.value})}
+                />
+                <input 
+                  type="tel" 
+                  placeholder={t.form_placeholder_phone}
+                  className="form-input"
+                  style={{marginBottom: '2rem'}}
+                  value={sourcingData.phone}
+                  onChange={(e) => setSourcingData({...sourcingData, phone: e.target.value})}
+                />
+                <div className="form-actions" style={{justifyContent: 'flex-end'}}>
+                  <button className="btn btn-primary" onClick={() => setIsSourcingOpen(false)} disabled={!sourcingData.reference || !sourcingData.email}>
+                    {t.sourcing_btn_submit}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+    </motion.div>
   )
 }
 
