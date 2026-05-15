@@ -181,13 +181,18 @@ function App() {
           <a href="#collection">{t.nav_collection}</a>
           <button onClick={() => setIsModalOpen(true)} className="btn-contact">{t.nav_estimate}</button>
           
-          <div className="lang-switcher">
-            <Globe size={16} />
-            <select value={lang} onChange={(e) => setLang(e.target.value)}>
-              <option value="fr">FR</option>
-              <option value="en">EN</option>
-              <option value="ar">AR</option>
-            </select>
+          <div className="lang-switcher-premium">
+            {['fr', 'en', 'ar'].map((l) => (
+              <React.Fragment key={l}>
+                <button 
+                  className={`lang-btn ${lang === l ? 'active' : ''}`}
+                  onClick={() => setLang(l)}
+                >
+                  {l.toUpperCase()}
+                </button>
+                {l !== 'ar' && <span className="lang-separator">|</span>}
+              </React.Fragment>
+            ))}
           </div>
         </nav>
       </header>

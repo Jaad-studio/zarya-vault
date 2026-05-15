@@ -80,28 +80,38 @@
   color: var(--color-text-main);
 }
 
-/* LANG SWITCHER */
-.lang-switcher {
+/* LANG SWITCHER PREMIUM */
+.lang-switcher-premium {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-text-muted);
   margin-left: 1rem;
 }
 
-.lang-switcher select {
-  background: transparent;
+.lang-btn {
+  background: none;
   border: none;
-  color: var(--color-text-main);
-  font-size: 0.8rem;
-  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-family: var(--font-body);
   cursor: pointer;
-  outline: none;
+  padding: 0;
+  transition: color 0.3s ease;
+  letter-spacing: 1px;
 }
 
-.lang-switcher select option {
-  background: var(--color-bg-dark);
+.lang-btn:hover {
   color: var(--color-text-main);
+}
+
+.lang-btn.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.lang-separator {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
 }
 
 .btn-contact {
