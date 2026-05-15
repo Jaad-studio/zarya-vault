@@ -11,7 +11,7 @@
 
 .preloader-text {
   font-family: var(--font-heading);
-  color: var(--color-accent);
+  color: #ffffff;
   font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;

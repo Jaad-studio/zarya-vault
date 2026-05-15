@@ -285,7 +285,10 @@ function App() {
               className="hero-cta" 
               style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'}}
             >
-              <button onClick={() => setIsSourcingOpen(true)} className="btn btn-primary btn-large">
+              <a href="#collection" className="btn btn-primary btn-large" style={{textDecoration: 'none'}}>
+                {t.btn_our_watches}
+              </a>
+              <button onClick={() => setIsSourcingOpen(true)} className="btn btn-large" style={{background: 'var(--color-accent)', color: 'var(--color-bg-dark)', border: 'none', fontWeight: 700}}>
                 <Search size={20} /> {t.btn_sourcing}
               </button>
               <button onClick={() => setIsModalOpen(true)} className="btn btn-large" style={{background: 'rgba(255,255,255,0.05)', color: '#fff', border: '1px solid rgba(255,255,255,0.2)'}}>
