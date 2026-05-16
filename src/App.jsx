@@ -8,7 +8,7 @@ const translations = {
   fr: {
     nav_concept: "L'Expertise",
     nav_collection: "Collection",
-    nav_estimate: "Demander une Expertise",
+    nav_estimate: "Vendre ma Montre",
     hero_badge: "Est. 2026",
     hero_title: "L'Excellence Horlogère.",
     hero_subtitle: "Votre partenaire de confiance pour l'acquisition et la valorisation de garde-temps exclusifs. Discrétion absolue, authenticité certifiée.",
@@ -37,7 +37,7 @@ const translations = {
     footer_contact: "Contact Conciergerie",
     footer_links: "Liens Officiels",
     // Form Estimate
-    form_title: "Demander une Expertise",
+    form_title: "Vendre ma Montre",
     form_step1: "Manufacture",
     form_step2: "Référence exacte de la pièce",
     form_step3: "État & Contenu (Set)",
@@ -62,7 +62,7 @@ const translations = {
   en: {
     nav_concept: "The Expertise",
     nav_collection: "Collection",
-    nav_estimate: "Request an Appraisal",
+    nav_estimate: "Sell my Watch",
     hero_badge: "Est. 2026",
     hero_title: "Horological Excellence.",
     hero_subtitle: "Your trusted partner for the acquisition and appraisal of exclusive timepieces. Absolute discretion, certified authenticity.",
@@ -90,7 +90,7 @@ const translations = {
     footer_desc: "Private advisory and brokerage firm in Haute Horlogerie.",
     footer_contact: "Concierge Contact",
     footer_links: "Official Links",
-    form_title: "Request an Appraisal",
+    form_title: "Sell my Watch",
     form_step1: "Manufacture",
     form_step2: "Exact Piece Reference",
     form_step3: "Condition & Contents (Set)",
@@ -114,7 +114,7 @@ const translations = {
   ar: {
     nav_concept: "الخبرة",
     nav_collection: "المجموعة",
-    nav_estimate: "طلب تقييم",
+    nav_estimate: "بيع ساعتي",
     hero_badge: "تأسست ٢٠٢٦",
     hero_title: "التميز في صناعة الساعات",
     hero_subtitle: "شريكك الموثوق لاقتناء وتقييم الساعات الحصرية. سرية تامة، وأصالة معتمدة.",
@@ -142,7 +142,7 @@ const translations = {
     footer_desc: "شركة استشارية ووساطة خاصة في الساعات الفاخرة.",
     footer_contact: "اتصل بالكونسيرج",
     footer_links: "روابط رسمية",
-    form_title: "طلب تقييم",
+    form_title: "بيع ساعتي",
     form_step1: "الشركة المصنعة",
     form_step2: "الرقم المرجعي الدقيق للقطعة",
     form_step3: "الحالة والمحتويات",
