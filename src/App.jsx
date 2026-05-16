@@ -196,6 +196,18 @@ function App() {
   const nextStep = () => setFormStep(prev => Math.min(prev + 1, 5))
   const prevStep = () => setFormStep(prev => Math.max(prev - 1, 1))
 
+  const handleEstimateSubmit = () => {
+    const text = `Bonjour Zarya Vault, je souhaite faire estimer ma montre.%0A*Marque :* ${formData.brand}%0A*Modèle :* ${formData.model}%0A*État/Set :* ${formData.condition}%0A*Email :* ${formData.email}%0A*Téléphone :* ${formData.phone}`
+    window.open(`https://wa.me/33788408004?text=${text}`, '_blank')
+    setIsModalOpen(false)
+  }
+
+  const handleSourcingSubmit = () => {
+    const text = `Bonjour Zarya Vault, je recherche une pièce spécifique.%0A*Référence :* ${sourcingData.reference}%0A*Email :* ${sourcingData.email}%0A*Téléphone :* ${sourcingData.phone}`
+    window.open(`https://wa.me/33788408004?text=${text}`, '_blank')
+    setIsSourcingOpen(false)
+  }
+
   // Animation variants
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 50 },
@@ -521,7 +533,7 @@ function App() {
                   />
                   <div className="form-actions">
                     <button className="btn-text" onClick={prevStep}>Retour</button>
-                    <button className="btn btn-primary" onClick={() => setIsModalOpen(false)}>{t.form_btn_submit}</button>
+                    <button className="btn btn-primary" onClick={handleEstimateSubmit}>{t.form_btn_submit}</button>
                   </div>
                 </div>
               )}
@@ -572,7 +584,7 @@ function App() {
                   onChange={(e) => setSourcingData({...sourcingData, phone: e.target.value})}
                 />
                 <div className="form-actions" style={{justifyContent: 'flex-end'}}>
-                  <button className="btn btn-primary" onClick={() => setIsSourcingOpen(false)} disabled={!sourcingData.reference || !sourcingData.email}>
+                  <button className="btn btn-primary" onClick={handleSourcingSubmit} disabled={!sourcingData.reference || !sourcingData.email}>
                     {t.sourcing_btn_submit}
                   </button>
                 </div>
