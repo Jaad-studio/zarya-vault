@@ -45,18 +45,18 @@ const translations = {
     form_step5: "Vos coordonnées confidentielles",
     form_btn_next: "Étape Suivante",
     form_btn_submit: "Transmettre au Cabinet",
-    form_placeholder_model: "Ex: Rolex Daytona 116500LN",
-    form_placeholder_email: "Adresse e-mail sécurisée",
-    form_placeholder_phone: "Ligne directe (Téléphone)",
+    form_placeholder_model: "Modèle de la montre",
+    form_placeholder_email: "Email",
+    form_placeholder_phone: "Téléphone",
     set_full: "Full Set (Boîte d'origine & Certificats)",
     set_box: "Boîte uniquement",
     set_naked: "Montre seule",
     upload_text: "Cliquez pour déposer vos clichés HD",
     // Form Sourcing
-    btn_sourcing: "Sourcing Privé",
-    sourcing_title: "Recherche Hors-Marché",
-    sourcing_desc: "Confiez-nous la référence exacte de la pièce introuvable que vous désirez. Notre réseau privé vous la sourcera dans les plus brefs délais.",
-    sourcing_placeholder: "Ex: Audemars Piguet Royal Oak 15500ST",
+    btn_sourcing: "Trouver une Montre",
+    sourcing_title: "Rechercher une Montre",
+    sourcing_desc: "",
+    sourcing_placeholder: "Modèle ou Référence recherchée",
     sourcing_btn_submit: "Lancer la recherche"
   },
   en: {
@@ -98,18 +98,18 @@ const translations = {
     form_step5: "Your Confidential Contact Info",
     form_btn_next: "Next Step",
     form_btn_submit: "Submit to Advisory",
-    form_placeholder_model: "Ex: Rolex Daytona 116500LN",
-    form_placeholder_email: "Secure E-mail Address",
-    form_placeholder_phone: "Direct Line (Phone)",
+    form_placeholder_model: "Watch Model",
+    form_placeholder_email: "Email",
+    form_placeholder_phone: "Phone",
     set_full: "Full Set (Original Box & Papers)",
     set_box: "Box Only",
     set_naked: "Watch Only",
     upload_text: "Click to upload HD imagery",
-    btn_sourcing: "Private Sourcing",
-    sourcing_title: "Off-Market Request",
-    sourcing_desc: "Provide us with the exact reference of the elusive piece you desire. Our private network will source it for you promptly.",
-    sourcing_placeholder: "Ex: Audemars Piguet Royal Oak 15500ST",
-    sourcing_btn_submit: "Initiate Search"
+    btn_sourcing: "Find a Watch",
+    sourcing_title: "Find a Watch",
+    sourcing_desc: "",
+    sourcing_placeholder: "Desired Model or Reference",
+    sourcing_btn_submit: "Search"
   },
   ar: {
     nav_concept: "الخبرة",
@@ -150,17 +150,17 @@ const translations = {
     form_step5: "معلومات الاتصال السرية الخاصة بك",
     form_btn_next: "الخطوة التالية",
     form_btn_submit: "إرسال إلى القسم الاستشاري",
-    form_placeholder_model: "مثال: Rolex Daytona 116500LN",
-    form_placeholder_email: "بريد إلكتروني آمن",
-    form_placeholder_phone: "خط مباشر (هاتف)",
+    form_placeholder_model: "موديل الساعة",
+    form_placeholder_email: "البريد الإلكتروني",
+    form_placeholder_phone: "الهاتف",
     set_full: "مجموعة كاملة (العلبة الأصلية والشهادات)",
     set_box: "العلبة فقط",
     set_naked: "الساعة فقط",
     upload_text: "انقر لتحميل صور عالية الدقة",
-    btn_sourcing: "البحث الخاص",
-    sourcing_title: "طلب خارج السوق",
-    sourcing_desc: "زودنا بالرقم المرجعي الدقيق للقطعة النادرة التي ترغب بها. ستقوم شبكتنا الخاصة بتوفيرها لك في أسرع وقت.",
-    sourcing_placeholder: "مثال: Audemars Piguet Royal Oak 15500ST",
+    btn_sourcing: "البحث عن ساعة",
+    sourcing_title: "طلب بحث عن ساعة",
+    sourcing_desc: "",
+    sourcing_placeholder: "الموديل أو الرقم المرجعي",
     sourcing_btn_submit: "بدء البحث"
   }
 }
@@ -545,7 +545,6 @@ function App() {
             
             <div className="modal-header">
               <h2>{t.sourcing_title}</h2>
-              <p style={{color: 'var(--color-text-muted)', fontSize: '0.9rem', marginTop: '0.5rem'}}>{t.sourcing_desc}</p>
             </div>
 
             <div className="modal-body" style={{ minHeight: 'auto' }}>
