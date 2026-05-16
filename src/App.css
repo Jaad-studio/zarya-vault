@@ -521,7 +521,8 @@
 }
 
 .guarantee-badge {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 0.75rem;
   background: rgba(212, 175, 55, 0.1);
