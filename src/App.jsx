@@ -15,12 +15,12 @@ const translations = {
     hero_btn: "Découvrir",
     status_label: "Statut",
     status_value: "Expertisé & Certifié",
-    concept_title: "Le Sourcing Privé.",
-    concept_desc: "La plupart des pièces exceptionnelles ne sont jamais exposées en vitrine. Notre métier est d'activer notre réseau pour sourcer la montre que vous cherchez, au juste prix et en toute discrétion. Pas de catalogue public, uniquement du sur-mesure.",
-    feature1_title: "Réseau Hors-Marché",
-    feature1_desc: "Nous sommes en contact direct avec des marchands et collectionneurs du monde entier. Si la pièce existe, nous la trouvons.",
-    feature2_title: "Zéro Compromis",
-    feature2_desc: "Chaque montre passe entre les mains de nos horlogers partenaires. Authentification stricte, mécanisme vérifié, traçabilité garantie.",
+    concept_title: "L'Art de l'Introuvable.",
+    concept_desc: "Nous opérons là où les catalogues s'arrêtent. Un accès direct aux collections privées les plus fermées du monde pour dénicher la montre exacte que vous désirez.",
+    feature1_title: "Réseau Confidentiel",
+    feature1_desc: "Connexion directe et discrète avec les collectionneurs et marchands mondiaux.",
+    feature2_title: "Authentification Absolue",
+    feature2_desc: "Chaque garde-temps est rigoureusement inspecté et certifié par nos maîtres horlogers avant la remise en main propre.",
     collection_title: "Nos Montres",
     collection_desc: "Toutes nos montres sont garanties 1 an.",
     watch1_title: "Rolex Daytona 'Panda'",
@@ -69,12 +69,12 @@ const translations = {
     hero_btn: "Discover",
     status_label: "Status",
     status_value: "Appraised & Certified",
-    concept_title: "Private Sourcing.",
-    concept_desc: "Most exceptional timepieces never make it to a public display. Our job is to activate our private network to source the exact watch you're looking for, at the right price, with absolute discretion. No public catalogs, just bespoke service.",
-    feature1_title: "Off-Market Network",
-    feature1_desc: "We are in direct contact with trusted dealers and collectors worldwide. If the piece exists, we'll find it.",
-    feature2_title: "Zero Compromise",
-    feature2_desc: "Every watch passes through our partner watchmakers. Strict authentication, verified movement, guaranteed traceability.",
+    concept_title: "The Art of the Unfindable.",
+    concept_desc: "We operate where catalogs end. Direct access to the world's most exclusive private collections to source the exact timepiece you desire.",
+    feature1_title: "Confidential Network",
+    feature1_desc: "Direct and discreet connection with global collectors and dealers.",
+    feature2_title: "Absolute Authentication",
+    feature2_desc: "Every timepiece is rigorously inspected and certified by our master watchmakers prior to handover.",
     collection_title: "Our Watches",
     collection_desc: "All our watches come with a 1-year warranty.",
     watch1_title: "Rolex Daytona 'Panda'",
@@ -121,12 +121,12 @@ const translations = {
     hero_btn: "اكتشف",
     status_label: "الحالة",
     status_value: "تم التقييم والاعتماد",
-    concept_title: "البحث الخاص",
-    concept_desc: "معظم الساعات الاستثنائية لا تُعرض في واجهات المتاجر. مهمتنا هي تفعيل شبكتنا الخاصة للعثور على الساعة التي تبحث عنها، بالسعر المناسب وبسرية تامة. لا نعتمد على الكتالوجات العامة، بل نقدم خدمة مصممة خصيصاً لك.",
-    feature1_title: "شبكة خارج السوق",
-    feature1_desc: "نحن على اتصال مباشر مع تجار وهواة جمع موثوقين حول العالم. إذا كانت القطعة موجودة، سنجدها لك.",
-    feature2_title: "بدون أي تنازلات",
-    feature2_desc: "تمر كل ساعة بين أيدي خبراء الساعات المعتمدين لدينا. فحص صارم للأصالة، وآلية عمل مضمونة.",
+    concept_title: "فن الوصول إلى النوادر.",
+    concept_desc: "نعمل حيث تنتهي الكتالوجات. وصول مباشر لأكثر المجموعات الخاصة حصرية في العالم لنوفر لك الساعة التي تبحث عنها.",
+    feature1_title: "شبكة سرية",
+    feature1_desc: "تواصل مباشر وسري مع هواة الجمع والتجار حول العالم.",
+    feature2_title: "توثيق مطلق",
+    feature2_desc: "تُفحص كل ساعة وتُعتمد بدقة من قبل خبراء الساعات لدينا قبل التسليم.",
     collection_title: "ساعاتنا",
     collection_desc: "جميع ساعاتنا مضمونة لمدة سنة واحدة.",
     watch1_title: "رولكس دايتونا باندا",
@@ -301,30 +301,30 @@ function App() {
             </motion.div>
           </div>
         </section>
-
         {/* CONCEPT SECTION */}
-        <section id="concept" className="section concept-section">
-          <div className="container concept-layout">
+        <section id="concept" className="concept-section container">
+          <div className="concept-grid-minimal">
+            
             <motion.div 
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariant}
-              className="concept-text editorial-text"
+              className="concept-text-minimal"
             >
-              <h2 className="section-title">{t.concept_title}</h2>
-              <p className="section-desc">{t.concept_desc}</p>
+              <h2 className="serif-title">{t.concept_title}</h2>
+              <p className="concept-lead">{t.concept_desc}</p>
               
-              <div className="features">
-                <div className="feature glass-feature-dark">
-                  <Globe className="feature-icon" size={24} />
+              <div className="features-minimal">
+                <div className="feature-item-minimal">
+                  <span className="feature-number">01</span>
                   <div>
                     <h3>{t.feature1_title}</h3>
                     <p>{t.feature1_desc}</p>
                   </div>
                 </div>
-                <div className="feature glass-feature-dark">
-                  <CheckCircle2 className="feature-icon" size={24} />
+                <div className="feature-item-minimal">
+                  <span className="feature-number">02</span>
                   <div>
                     <h3>{t.feature2_title}</h3>
                     <p>{t.feature2_desc}</p>
@@ -332,16 +332,17 @@ function App() {
                 </div>
               </div>
             </motion.div>
+
             <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUpVariant}
-              className="concept-image-wrapper editorial-image-wrapper"
+              className="concept-image-minimal"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
             >
-              <img src="/sourcing_macro.png" alt="Sourcing & Authentication" className="concept-img dark-img-filter editorial-img" />
-              <div className="decoration-square dark-square editorial-square"></div>
+              <img src="/sourcing_macro.png" alt="Sourcing & Authentication" className="minimal-img" />
             </motion.div>
+
           </div>
         </section>
 
