@@ -15,12 +15,12 @@ const translations = {
     hero_btn: "Découvrir",
     status_label: "Statut",
     status_value: "Expertisé & Certifié",
-    concept_title: "Plus qu'une boutique. Un cabinet d'expertise.",
-    concept_desc: "ZARYA VAULT opère au cœur du marché horloger mondial. Nous sourçons, authentifions et livrons les références les plus convoitées au monde. Que vous cherchiez une pièce d'investissement introuvable ou que vous souhaitiez vous séparer de votre collection, nous garantissons une transaction fluide et sécurisée.",
-    feature1_title: "Expertise Indépendante",
-    feature1_desc: "Chaque pièce est rigoureusement inspectée, certifiée et garantie par nos maîtres horlogers.",
-    feature2_title: "Discrétion & Sécurité",
-    feature2_desc: "Des transactions hautement confidentielles, soutenues par une logistique blindée et assurée à 100%.",
+    concept_title: "L'Art du Sourcing & de l'Acquisition",
+    concept_desc: "Nous vous donnons accès à un inventaire hors-marché exclusif, réservé aux collectionneurs et investisseurs avertis. De la recherche de la pièce rare à son authentification experte, chaque étape est orchestrée avec la plus grande discrétion.",
+    feature1_title: "Sourcing International",
+    feature1_desc: "Accès privilégié aux collections privées et réseaux horlogers mondiaux pour trouver l'introuvable.",
+    feature2_title: "Certification & Authenticité",
+    feature2_desc: "Contrôle rigoureux et certification par nos maîtres horlogers, garantissant une intégrité totale.",
     collection_title: "Nos Montres",
     collection_desc: "Un aperçu confidentiel de nos pièces actuellement sous voûte.",
     watch1_title: "Rolex Daytona 'Panda'",
@@ -69,12 +69,12 @@ const translations = {
     hero_btn: "Discover",
     status_label: "Status",
     status_value: "Appraised & Certified",
-    concept_title: "Beyond a boutique. An advisory firm.",
-    concept_desc: "ZARYA VAULT operates at the core of the global watch market. We source, authenticate, and deliver the world's most sought-after references. Whether you are looking for an elusive investment piece or parting with your collection, we guarantee a seamless and secure transaction.",
-    feature1_title: "Independent Appraisal",
-    feature1_desc: "Every timepiece is rigorously inspected, certified, and guaranteed by our master horologists.",
-    feature2_title: "Discretion & Security",
-    feature2_desc: "Highly confidential transactions, backed by armored logistics and fully insured worldwide.",
+    concept_title: "The Art of Sourcing & Acquisition",
+    concept_desc: "We provide access to an exclusive off-market inventory reserved for discerning collectors and investors. From locating the elusive piece to its expert authentication, every step is orchestrated with the utmost discretion.",
+    feature1_title: "International Sourcing",
+    feature1_desc: "Privileged access to private collections and global watch networks to find the unfindable.",
+    feature2_title: "Certification & Authenticity",
+    feature2_desc: "Rigorous control and certification by our master watchmakers, guaranteeing total integrity.",
     collection_title: "Our Watches",
     collection_desc: "A confidential glimpse into the pieces currently in our vault.",
     watch1_title: "Rolex Daytona 'Panda'",
@@ -121,12 +121,12 @@ const translations = {
     hero_btn: "اكتشف",
     status_label: "الحالة",
     status_value: "تم التقييم والاعتماد",
-    concept_title: "أكثر من مجرد متجر. شركة استشارية.",
-    concept_desc: "تعمل ZARYA VAULT في صميم سوق الساعات العالمي. نقوم بالبحث والمصادقة وتوفير المراجع الأكثر طلباً في العالم. سواء كنت تبحث عن قطعة استثمارية نادرة أو ترغب في بيع مجموعتك، نضمن لك معاملة سلسة وآمنة.",
-    feature1_title: "تقييم مستقل",
-    feature1_desc: "يتم فحص وتوثيق وضمان كل قطعة بدقة من قبل خبراء الساعات لدينا.",
-    feature2_title: "سرية وأمان",
-    feature2_desc: "معاملات سرية للغاية، مدعومة بلوجستيات مصفحة ومؤمنة بالكامل حول العالم.",
+    concept_title: "فن البحث والاستحواذ",
+    concept_desc: "نوفر لك وصولاً حصرياً إلى مخزون خارج السوق مخصص لهواة الجمع والمستثمرين المتميزين. من البحث عن القطعة النادرة إلى توثيقها الاحترافي، يتم تنسيق كل خطوة بأقصى درجات السرية.",
+    feature1_title: "مصادر دولية",
+    feature1_desc: "وصول استثنائي إلى المجموعات الخاصة وشبكات الساعات العالمية للعثور على القطع النادرة.",
+    feature2_title: "الاعتماد والأصالة",
+    feature2_desc: "رقابة صارمة واعتماد من قبل خبراء الساعات لدينا، مما يضمن النزاهة التامة.",
     collection_title: "ساعاتنا",
     collection_desc: "لمحة سرية عن القطع الموجودة حالياً في خزينتنا.",
     watch1_title: "رولكس دايتونا باندا",
@@ -306,37 +306,37 @@ function App() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUpVariant}
-              className="concept-image-wrapper"
-            >
-              <img src="/concept_glass.png" alt="The Vault Concept" className="concept-img dark-img-filter" />
-              <div className="decoration-square dark-square"></div>
-            </motion.div>
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUpVariant}
-              className="concept-text"
+              className="concept-text editorial-text"
             >
               <h2 className="section-title">{t.concept_title}</h2>
               <p className="section-desc">{t.concept_desc}</p>
               
               <div className="features">
                 <div className="feature glass-feature-dark">
-                  <Shield className="feature-icon" size={24} />
+                  <Globe className="feature-icon" size={24} />
                   <div>
                     <h3>{t.feature1_title}</h3>
                     <p>{t.feature1_desc}</p>
                   </div>
                 </div>
                 <div className="feature glass-feature-dark">
-                  <Lock className="feature-icon" size={24} />
+                  <CheckCircle2 className="feature-icon" size={24} />
                   <div>
                     <h3>{t.feature2_title}</h3>
                     <p>{t.feature2_desc}</p>
                   </div>
                 </div>
               </div>
+            </motion.div>
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeUpVariant}
+              className="concept-image-wrapper editorial-image-wrapper"
+            >
+              <img src="/sourcing_macro.png" alt="Sourcing & Authentication" className="concept-img dark-img-filter editorial-img" />
+              <div className="decoration-square dark-square editorial-square"></div>
             </motion.div>
           </div>
         </section>
