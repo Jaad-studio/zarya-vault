@@ -225,12 +225,29 @@ function App() {
             transition={{ duration: 0.8 }}
           >
             <motion.h1 
-              initial={{ opacity: 0, scale: 0.9, letterSpacing: "0.2em" }}
-              animate={{ opacity: 1, scale: 1, letterSpacing: "0.4em" }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
               className="preloader-text"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 1 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.08, delayChildren: 0.2 }
+                }
+              }}
             >
-              ZARYA VAULT
+              {"ZARYA VAULT".split("").map((char, i) => (
+                <motion.span 
+                  key={i}
+                  variants={{
+                    hidden: { opacity: 0, filter: 'blur(10px)', y: 20 },
+                    visible: { opacity: 1, filter: 'blur(0px)', y: 0, transition: { duration: 1, ease: "easeOut" } }
+                  }}
+                  style={{ display: "inline-block", whiteSpace: char === " " ? "pre" : "normal" }}
+                >
+                  {char}
+                </motion.span>
+              ))}
             </motion.h1>
           </motion.div>
         )}
@@ -280,12 +297,29 @@ function App() {
           
           <div className="hero-content">
             <motion.h1 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
               className="hero-huge-title"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: { opacity: 1 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.15, delayChildren: 0.5 }
+                }
+              }}
             >
-              ZARYA
+              {"ZARYA".split("").map((char, i) => (
+                <motion.span 
+                  key={i}
+                  variants={{
+                    hidden: { opacity: 0, filter: 'blur(20px)', scale: 1.1, y: 30 },
+                    visible: { opacity: 1, filter: 'blur(0px)', scale: 1, y: 0, transition: { duration: 1.5, ease: [0.2, 0.65, 0.3, 0.9] } }
+                  }}
+                  style={{ display: "inline-block" }}
+                >
+                  {char}
+                </motion.span>
+              ))}
             </motion.h1>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
