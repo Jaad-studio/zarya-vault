@@ -265,7 +265,6 @@ function App() {
           {/* Subtle Abstract Video Background */}
           <video 
             autoPlay 
-            loop 
             muted 
             playsInline 
             className="hero-video-bg"
