@@ -356,7 +356,10 @@ function App() {
               className="section-header"
             >
               <h2 className="section-title text-center">{t.collection_title}</h2>
-              <p className="section-desc text-center">{t.collection_desc}</p>
+              <div className="guarantee-badge">
+                <Shield size={20} className="guarantee-icon" />
+                <span>{t.collection_desc}</span>
+              </div>
             </motion.div>
             
             <div className="watch-grid">
