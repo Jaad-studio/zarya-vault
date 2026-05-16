@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Lock, Shield, Watch, ChevronRight, ArrowRight, CheckCircle2, X, UploadCloud, Globe, Search, MessageCircle } from 'lucide-react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import './App.css'
 
 // --- TRANSLATIONS ---
@@ -214,28 +214,34 @@ function App() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   }
 
-  if (loading) {
-    return (
-      <div className="preloader">
-        <motion.h1 
-          initial={{ opacity: 0, scale: 0.9, letterSpacing: "0.2em" }}
-          animate={{ opacity: 1, scale: 1, letterSpacing: "0.4em" }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="preloader-text"
-        >
-          ZARYA VAULT
-        </motion.h1>
-      </div>
-    )
-  }
-
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className={`app-container ${lang === 'ar' ? 'rtl-layout' : ''}`}
-    >
+    <>
+      <AnimatePresence>
+        {loading && (
+          <motion.div 
+            key="preloader"
+            className="preloader"
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9, letterSpacing: "0.2em" }}
+              animate={{ opacity: 1, scale: 1, letterSpacing: "0.4em" }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="preloader-text"
+            >
+              ZARYA VAULT
+            </motion.h1>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className={`app-container ${lang === 'ar' ? 'rtl-layout' : ''}`}
+      >
       <header className="header glass-dark">
         <div className="logo">ZARYA VAULT</div>
         <nav className="nav">
@@ -608,6 +614,7 @@ function App() {
       )}
 
     </motion.div>
+    </>
   )
 }
 
