@@ -270,7 +270,7 @@ function App() {
             playsInline 
             className="hero-video-bg"
           >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-black-and-white-abstract-liquid-background-31714-large.mp4" type="video/mp4" />
+            <source src="/hero-bg.mp4" type="video/mp4" />
           </video>
           
           <div className="hero-content">
