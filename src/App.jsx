@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Lock, Shield, Watch, ChevronRight, ArrowRight, CheckCircle2, X, UploadCloud, Globe, Search } from 'lucide-react'
+import { Lock, Shield, Watch, ChevronRight, ArrowRight, CheckCircle2, X, UploadCloud, Globe, Search, MessageCircle } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import './App.css'
 
@@ -426,6 +426,16 @@ function App() {
           </div>
         </div>
       </footer>
+
+      <a 
+        href="https://wa.me/33788408004" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="whatsapp-float"
+        aria-label="Contact us on WhatsApp"
+      >
+        <MessageCircle size={28} />
+      </a>
 
       {/* ESTIMATE MODAL (SELL/APPRAISAL) */}
       {isModalOpen && (
