@@ -256,12 +256,15 @@
 }
 
 .hero-huge-title {
-  font-size: clamp(4rem, 12vw, 10rem);
+  font-size: clamp(6rem, 18vw, 18rem);
+  font-family: var(--font-heading);
   font-weight: 800;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 0.8;
   letter-spacing: -0.05em;
   margin-bottom: 2rem;
-  line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-subtitle-centered {
