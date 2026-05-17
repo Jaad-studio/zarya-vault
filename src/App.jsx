@@ -172,8 +172,8 @@ function App() {
   const [isSourcingOpen, setIsSourcingOpen] = useState(false)
   
   const [formStep, setFormStep] = useState(1)
-  const [formData, setFormData] = useState({ brand: '', model: '', condition: '', email: '', phone: '' })
-  const [sourcingData, setSourcingData] = useState({ reference: '', email: '', phone: '' })
+  const [formData, setFormData] = useState({ brand: '', model: '', condition: '', phone: '' })
+  const [sourcingData, setSourcingData] = useState({ reference: '', phone: '' })
 
   const collectionRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: collectionRef, offset: ["start end", "end start"] })
@@ -197,13 +197,13 @@ function App() {
   const prevStep = () => setFormStep(prev => Math.max(prev - 1, 1))
 
   const handleEstimateSubmit = () => {
-    const text = `Bonjour Zarya Vault, je souhaite faire estimer ma montre.%0A*Marque :* ${formData.brand}%0A*Modèle :* ${formData.model}%0A*État/Set :* ${formData.condition}%0A*Email :* ${formData.email}%0A*Téléphone :* ${formData.phone}`
+    const text = `Bonjour Zarya Vault, je souhaite faire estimer ma montre.%0A*Marque :* ${formData.brand}%0A*Modèle :* ${formData.model}%0A*État/Set :* ${formData.condition}%0A*Téléphone :* ${formData.phone}`
     window.open(`https://wa.me/33626789839?text=${text}`, '_blank')
     setIsModalOpen(false)
   }
 
   const handleSourcingSubmit = () => {
-    const text = `Bonjour Zarya Vault, je recherche une pièce spécifique.%0A*Référence :* ${sourcingData.reference}%0A*Email :* ${sourcingData.email}%0A*Téléphone :* ${sourcingData.phone}`
+    const text = `Bonjour Zarya Vault, je recherche une pièce spécifique.%0A*Référence :* ${sourcingData.reference}%0A*Téléphone :* ${sourcingData.phone}`
     window.open(`https://wa.me/33626789839?text=${text}`, '_blank')
     setIsSourcingOpen(false)
   }
@@ -536,13 +536,7 @@ function App() {
               {formStep === 5 && (
                 <div className="form-step slide-in">
                   <h3>{t.form_step5}</h3>
-                  <input 
-                    type="email" 
-                    placeholder={t.form_placeholder_email}
-                    className="form-input"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  />
+
                   <input 
                     type="tel" 
                     placeholder={t.form_placeholder_phone}
@@ -587,13 +581,7 @@ function App() {
                   value={sourcingData.reference}
                   onChange={(e) => setSourcingData({...sourcingData, reference: e.target.value})}
                 />
-                <input 
-                  type="email" 
-                  placeholder={t.form_placeholder_email}
-                  className="form-input"
-                  value={sourcingData.email}
-                  onChange={(e) => setSourcingData({...sourcingData, email: e.target.value})}
-                />
+
                 <input 
                   type="tel" 
                   placeholder={t.form_placeholder_phone}
@@ -603,7 +591,7 @@ function App() {
                   onChange={(e) => setSourcingData({...sourcingData, phone: e.target.value})}
                 />
                 <div className="form-actions" style={{justifyContent: 'flex-end'}}>
-                  <button className="btn btn-primary" onClick={handleSourcingSubmit} disabled={!sourcingData.reference || !sourcingData.email}>
+                  <button className="btn btn-primary" onClick={handleSourcingSubmit} disabled={!sourcingData.reference || !sourcingData.phone}>
                     {t.sourcing_btn_submit}
                   </button>
                 </div>
