@@ -33,7 +33,7 @@ const translations = {
     trust_1: "Trusted Seller Chrono24",
     trust_2: "Transactions par Escrow",
     trust_3: "Expédition Globale Sécurisée",
-    footer_desc: "Cabinet privé de conseil et courtage en Haute Horlogerie.",
+    footer_desc: "Cabinet privé de conseil et expertise en Haute Horlogerie.",
     footer_contact: "Contact Conciergerie",
     footer_links: "Liens Officiels",
     // Form Estimate
@@ -87,7 +87,7 @@ const translations = {
     trust_1: "Chrono24 Trusted Seller",
     trust_2: "Secure Escrow Transactions",
     trust_3: "Fully Insured Global Shipping",
-    footer_desc: "Private advisory and brokerage firm in Haute Horlogerie.",
+    footer_desc: "Private advisory and expertise firm in Haute Horlogerie.",
     footer_contact: "Concierge Contact",
     footer_links: "Official Links",
     form_title: "Sell my Watch",
