@@ -198,13 +198,13 @@ function App() {
 
   const handleEstimateSubmit = () => {
     const text = `Bonjour Zarya Vault, je souhaite faire estimer ma montre.%0A*Marque :* ${formData.brand}%0A*Modèle :* ${formData.model}%0A*État/Set :* ${formData.condition}%0A*Téléphone :* ${formData.phone}`
-    window.open(`https://wa.me/33626789839?text=${text}`, '_blank')
+    window.open(`https://wa.me/33788408004?text=${text}`, '_blank')
     setIsModalOpen(false)
   }
 
   const handleSourcingSubmit = () => {
     const text = `Bonjour Zarya Vault, je recherche une pièce spécifique.%0A*Référence :* ${sourcingData.reference}%0A*Téléphone :* ${sourcingData.phone}`
-    window.open(`https://wa.me/33626789839?text=${text}`, '_blank')
+    window.open(`https://wa.me/33788408004?text=${text}`, '_blank')
     setIsSourcingOpen(false)
   }
 
@@ -382,7 +382,7 @@ function App() {
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch1_title}</h3>
                   <p className="watch-brand">{t.watch1_brand}</p>
-                  <a href={`https://wa.me/33626789839?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch1_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
+                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch1_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
                 </div>
               </motion.div>
               
@@ -402,7 +402,7 @@ function App() {
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch2_title}</h3>
                   <p className="watch-brand">{t.watch2_brand}</p>
-                  <a href={`https://wa.me/33626789839?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch2_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
+                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch2_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
                 </div>
               </motion.div>
             </div>
@@ -421,7 +421,7 @@ function App() {
             <div className="link-group">
               <h4>{t.footer_contact}</h4>
               <p>concierge@zarya.fr</p>
-              <p>+33 1 00 00 00 00</p>
+              <p>+33 7 88 40 80 04</p>
             </div>
             <div className="link-group">
               <h4>{t.footer_links}</h4>
@@ -433,7 +433,7 @@ function App() {
       </footer>
 
       <a 
-        href="https://wa.me/33626789839" 
+        href="https://wa.me/33788408004" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="whatsapp-float"
