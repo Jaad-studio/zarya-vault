@@ -427,7 +427,7 @@ function App() {
                 className="watch-card dark-card"
               >
                 <motion.div style={{ y: yParallax1 }} className="watch-img-container">
-                  <img src="/watch1.png" alt="Rolex GMT-Master II Sprite" className="dark-img-filter" />
+                  <img src="/sprite.png" alt="Rolex GMT-Master II Sprite" className="dark-img-filter" style={{ mixBlendMode: 'screen' }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch3_title}</h3>
