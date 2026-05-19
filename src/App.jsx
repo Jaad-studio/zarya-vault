@@ -407,7 +407,7 @@ function App() {
               >
                 <motion.div style={{ y: yParallax2 }} className="watch-img-container">
                   <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#8b0000', color: '#fff', padding: '0.3rem 1rem', borderRadius: '4px', fontWeight: 'bold', zIndex: 10, letterSpacing: '0.1em'}}>{t.sold}</div>
-                  <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" style={{ filter: 'grayscale(100%)', opacity: 0.6 }} />
+                  <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" style={{ opacity: 0.4 }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch2_title}</h3>
