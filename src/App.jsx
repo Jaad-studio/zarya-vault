@@ -27,6 +27,9 @@ const translations = {
     watch1_brand: "116519LN - 2020 Full Set + Rubber B offert",
     watch2_title: "Rolex Datejust 41",
     watch2_brand: "126303 - 2023 Full Set - Cadran Motif Cannelé",
+    watch3_title: "Rolex GMT-Master II 'Sprite'",
+    watch3_brand: "126720VTNR - 2023 Full Set Neuf - Bracelet Jubilé",
+    sold: "Vendu",
     btn_request: "Nous Contacter",
     btn_our_watches: "Nos Montres",
     trust_title: "Standards Internationaux",
@@ -81,6 +84,9 @@ const translations = {
     watch1_brand: "116519LN - 2020 Full Set + Free Rubber B Strap",
     watch2_title: "Rolex Datejust 41",
     watch2_brand: "126303 - 2023 Full Set - Fluted Motif Dial",
+    watch3_title: "Rolex GMT-Master II 'Sprite'",
+    watch3_brand: "126720VTNR - 2023 New Full Set - Jubilee Bracelet",
+    sold: "Sold",
     btn_request: "Contact Us",
     btn_our_watches: "Our Watches",
     trust_title: "Global Standards",
@@ -133,6 +139,9 @@ const translations = {
     watch1_brand: "116519LN - طقم كامل 2020 + حزام Rubber B مجاني",
     watch2_title: "رولكس ديت جست 41",
     watch2_brand: "126303 - طقم كامل 2023 - مينا مخدد",
+    watch3_title: "رولكس جي إم تي ماستر 2 'سبرايت'",
+    watch3_brand: "126720VTNR - طقم كامل 2023 جديد - سوار جوبيلي",
+    sold: "مباع",
     btn_request: "اتصل بنا",
     btn_our_watches: "ساعاتنا",
     trust_title: "معايير عالمية",
@@ -397,12 +406,33 @@ function App() {
                 className="watch-card offset-card dark-card"
               >
                 <motion.div style={{ y: yParallax2 }} className="watch-img-container">
-                  <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" />
+                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#8b0000', color: '#fff', padding: '0.3rem 1rem', borderRadius: '4px', fontWeight: 'bold', zIndex: 10, letterSpacing: '0.1em'}}>{t.sold}</div>
+                  <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" style={{ filter: 'grayscale(100%)', opacity: 0.6 }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch2_title}</h3>
                   <p className="watch-brand">{t.watch2_brand}</p>
-                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch2_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
+                  <span className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', color: '#888', cursor: 'not-allowed'}}>{t.sold}</span>
+                </div>
+              </motion.div>
+
+              <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={{
+                  hidden: { opacity: 0, y: 100 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.4, ease: "easeOut" } }
+                }}
+                className="watch-card dark-card"
+              >
+                <motion.div style={{ y: yParallax1 }} className="watch-img-container">
+                  <img src="/watch1.png" alt="Rolex GMT-Master II Sprite" className="dark-img-filter" />
+                </motion.div>
+                <div className="watch-info glass-info-dark">
+                  <h3>{t.watch3_title}</h3>
+                  <p className="watch-brand">{t.watch3_brand}</p>
+                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch3_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
                 </div>
               </motion.div>
             </div>
@@ -425,7 +455,7 @@ function App() {
             </div>
             <div className="link-group">
               <h4>{t.footer_links}</h4>
-              <a href="#">Instagram</a>
+              <a href="https://instagram.com/zarya_vault" target="_blank" rel="noopener noreferrer">Instagram</a>
               <a href="#">Chrono24 Store</a>
             </div>
           </div>
