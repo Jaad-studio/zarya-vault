@@ -24,7 +24,9 @@ const translations = {
     collection_title: "Nos Montres",
     collection_desc: "Toutes nos montres sont garanties 1 an.",
     watch1_title: "Rolex Daytona 'Panda'",
-    watch1_brand: "116519LN - 2020 Full Set + Rubber B offert",
+    watch1_brand: "116500 - 2020 Full Set + Rubber B offert",
+    watch4_title: "Rolex Daytona 'Panda'",
+    watch4_brand: "116500 - 2021 Full Set + Rubber B offert",
     watch2_title: "Rolex Datejust 41",
     watch2_brand: "126303 - 2023 Full Set - Cadran Motif Cannelé",
     watch3_title: "Rolex GMT-Master II 'Sprite'",
@@ -81,7 +83,9 @@ const translations = {
     collection_title: "Our Watches",
     collection_desc: "All our watches come with a 1-year warranty.",
     watch1_title: "Rolex Daytona 'Panda'",
-    watch1_brand: "116519LN - 2020 Full Set + Free Rubber B Strap",
+    watch1_brand: "116500 - 2020 Full Set + Free Rubber B Strap",
+    watch4_title: "Rolex Daytona 'Panda'",
+    watch4_brand: "116500 - 2021 Full Set + Free Rubber B Strap",
     watch2_title: "Rolex Datejust 41",
     watch2_brand: "126303 - 2023 Full Set - Fluted Motif Dial",
     watch3_title: "Rolex GMT-Master II 'Sprite'",
@@ -136,7 +140,9 @@ const translations = {
     collection_title: "ساعاتنا",
     collection_desc: "جميع ساعاتنا مضمونة لمدة سنة واحدة.",
     watch1_title: "رولكس دايتونا باندا",
-    watch1_brand: "116519LN - طقم كامل 2020 + حزام Rubber B مجاني",
+    watch1_brand: "116500 - طقم كامل 2020 + حزام Rubber B مجاني",
+    watch4_title: "رولكس دايتونا باندا",
+    watch4_brand: "116500 - طقم كامل 2021 + حزام Rubber B مجاني",
     watch2_title: "رولكس ديت جست 41",
     watch2_brand: "126303 - طقم كامل 2023 - مينا مخدد",
     watch3_title: "رولكس جي إم تي ماستر 2 'سبرايت'",
@@ -433,6 +439,26 @@ function App() {
                   <h3>{t.watch3_title}</h3>
                   <p className="watch-brand">{t.watch3_brand}</p>
                   <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch3_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
+                </div>
+              </motion.div>
+
+              <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={{
+                  hidden: { opacity: 0, y: 100 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.6, ease: "easeOut" } }
+                }}
+                className="watch-card offset-card dark-card"
+              >
+                <motion.div style={{ y: yParallax2 }} className="watch-img-container">
+                  <img src="/daytona.png" alt="Rolex Daytona Panda" className="dark-img-filter" />
+                </motion.div>
+                <div className="watch-info glass-info-dark">
+                  <h3>{t.watch4_title}</h3>
+                  <p className="watch-brand">{t.watch4_brand}</p>
+                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch4_title + " (2021)")}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
                 </div>
               </motion.div>
             </div>
