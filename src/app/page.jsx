@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react'
-import { Lock, Shield, Watch, ChevronRight, ArrowRight, CheckCircle2, X, UploadCloud, Globe, Search, MessageCircle } from 'lucide-react'
+import { Shield, ChevronRight, ArrowRight, X, UploadCloud, Search, MessageCircle } from 'lucide-react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 
 // --- TRANSLATIONS ---
