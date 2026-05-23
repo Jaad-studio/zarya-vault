@@ -432,13 +432,13 @@ function App() {
                 className="watch-card dark-card"
               >
                 <motion.div style={{ y: yParallax1 }} className="watch-img-container">
-                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#8b0000', color: '#fff', padding: '0.3rem 1rem', borderRadius: '4px', fontWeight: 'bold', zIndex: 10, letterSpacing: '0.1em'}}>{t.sold}</div>
+                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#e60000', color: '#fff', padding: '0.5rem 1.5rem', borderRadius: '4px', fontWeight: '900', fontSize: '1.2rem', textTransform: 'uppercase', zIndex: 10, letterSpacing: '0.15em', boxShadow: '0 4px 15px rgba(230,0,0,0.5)'}}>{t.sold}</div>
                   <img src="/daytona.png" alt="Rolex Daytona Panda" className="dark-img-filter" style={{ opacity: 0.4 }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch1_title}</h3>
                   <p className="watch-brand">{t.watch1_brand}</p>
-                  <span className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', color: '#888', cursor: 'not-allowed'}}>{t.sold}</span>
+                  <span className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', color: '#e60000', cursor: 'not-allowed', fontWeight: 'bold', fontSize: '1.1rem', textTransform: 'uppercase'}}>{t.sold}</span>
                 </div>
               </motion.div>
 
@@ -453,13 +453,13 @@ function App() {
                 className="watch-card offset-card dark-card"
               >
                 <motion.div style={{ y: yParallax2 }} className="watch-img-container">
-                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#8b0000', color: '#fff', padding: '0.3rem 1rem', borderRadius: '4px', fontWeight: 'bold', zIndex: 10, letterSpacing: '0.1em'}}>{t.sold}</div>
+                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#e60000', color: '#fff', padding: '0.5rem 1.5rem', borderRadius: '4px', fontWeight: '900', fontSize: '1.2rem', textTransform: 'uppercase', zIndex: 10, letterSpacing: '0.15em', boxShadow: '0 4px 15px rgba(230,0,0,0.5)'}}>{t.sold}</div>
                   <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" style={{ opacity: 0.4 }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
                   <h3>{t.watch2_title}</h3>
                   <p className="watch-brand">{t.watch2_brand}</p>
-                  <span className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', color: '#888', cursor: 'not-allowed'}}>{t.sold}</span>
+                  <span className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', color: '#e60000', cursor: 'not-allowed', fontWeight: 'bold', fontSize: '1.1rem', textTransform: 'uppercase'}}>{t.sold}</span>
                 </div>
               </motion.div>
             </div>
