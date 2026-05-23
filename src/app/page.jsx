@@ -432,7 +432,6 @@ function App() {
                 className="watch-card dark-card"
               >
                 <motion.div style={{ y: yParallax1 }} className="watch-img-container">
-                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#e60000', color: '#fff', padding: '0.5rem 1.5rem', borderRadius: '4px', fontWeight: '900', fontSize: '1.2rem', textTransform: 'uppercase', zIndex: 10, letterSpacing: '0.15em', boxShadow: '0 4px 15px rgba(230,0,0,0.5)'}}>{t.sold}</div>
                   <img src="/daytona.png" alt="Rolex Daytona Panda" className="dark-img-filter" style={{ opacity: 0.4 }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
@@ -453,7 +452,6 @@ function App() {
                 className="watch-card offset-card dark-card"
               >
                 <motion.div style={{ y: yParallax2 }} className="watch-img-container">
-                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#e60000', color: '#fff', padding: '0.5rem 1.5rem', borderRadius: '4px', fontWeight: '900', fontSize: '1.2rem', textTransform: 'uppercase', zIndex: 10, letterSpacing: '0.15em', boxShadow: '0 4px 15px rgba(230,0,0,0.5)'}}>{t.sold}</div>
                   <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" style={{ opacity: 0.4 }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
