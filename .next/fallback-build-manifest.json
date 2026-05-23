@@ -5,9 +5,9 @@
   "devFiles": [],
   "polyfillFiles": [],
   "lowPriorityFiles": [
-    "static/gop5AOvEVxw5EoO03gofP/_buildManifest.js",
-    "static/gop5AOvEVxw5EoO03gofP/_ssgManifest.js",
-    "static/gop5AOvEVxw5EoO03gofP/_clientMiddlewareManifest.js"
+    "static/iSPA32ANzuNReIP56OKxo/_buildManifest.js",
+    "static/iSPA32ANzuNReIP56OKxo/_ssgManifest.js",
+    "static/iSPA32ANzuNReIP56OKxo/_clientMiddlewareManifest.js"
   ],
   "rootMainFiles": []
 }

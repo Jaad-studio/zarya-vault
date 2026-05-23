@@ -477,7 +477,6 @@ function App() {
           <div className="footer-links">
             <div className="link-group">
               <h4>{t.footer_contact}</h4>
-              <p>concierge@zarya.fr</p>
               <p>+33 6 26 78 98 39</p>
             </div>
             <div className="link-group">
