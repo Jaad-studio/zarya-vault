@@ -213,13 +213,13 @@ function App() {
 
   const handleEstimateSubmit = () => {
     const text = `Bonjour Zarya Vault, je souhaite faire estimer ma montre.%0A*Marque :* ${formData.brand}%0A*Modèle :* ${formData.model}%0A*État/Set :* ${formData.condition}%0A*Téléphone :* ${formData.phone}`
-    window.open(`https://wa.me/33788408004?text=${text}`, '_blank')
+    window.open(`https://wa.me/33626789839?text=${text}`, '_blank')
     setIsModalOpen(false)
   }
 
   const handleSourcingSubmit = () => {
     const text = `Bonjour Zarya Vault, je recherche une pièce spécifique.%0A*Référence :* ${sourcingData.reference}%0A*Téléphone :* ${sourcingData.phone}`
-    window.open(`https://wa.me/33788408004?text=${text}`, '_blank')
+    window.open(`https://wa.me/33626789839?text=${text}`, '_blank')
     setIsSourcingOpen(false)
   }
 
@@ -392,15 +392,15 @@ function App() {
                 className="watch-card dark-card"
               >
                 <motion.div style={{ y: yParallax1 }} className="watch-img-container">
-                  <img src="/daytona.png" alt="Rolex Daytona Panda" className="dark-img-filter" />
+                  <img src="/sprite.png" alt="Rolex GMT-Master II Sprite" className="dark-img-filter" style={{ mixBlendMode: 'screen' }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
-                  <h3>{t.watch1_title}</h3>
-                  <p className="watch-brand">{t.watch1_brand}</p>
-                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch1_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
+                  <h3>{t.watch3_title}</h3>
+                  <p className="watch-brand">{t.watch3_brand}</p>
+                  <a href={`https://wa.me/33626789839?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch3_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
                 </div>
               </motion.div>
-              
+
               <motion.div 
                 initial="hidden"
                 whileInView="visible"
@@ -412,16 +412,15 @@ function App() {
                 className="watch-card offset-card dark-card"
               >
                 <motion.div style={{ y: yParallax2 }} className="watch-img-container">
-                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#8b0000', color: '#fff', padding: '0.3rem 1rem', borderRadius: '4px', fontWeight: 'bold', zIndex: 10, letterSpacing: '0.1em'}}>{t.sold}</div>
-                  <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" style={{ opacity: 0.4 }} />
+                  <img src="/daytona.png" alt="Rolex Daytona Panda" className="dark-img-filter" />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
-                  <h3>{t.watch2_title}</h3>
-                  <p className="watch-brand">{t.watch2_brand}</p>
-                  <span className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', color: '#888', cursor: 'not-allowed'}}>{t.sold}</span>
+                  <h3>{t.watch4_title}</h3>
+                  <p className="watch-brand">{t.watch4_brand}</p>
+                  <a href={`https://wa.me/33626789839?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch4_title + " (2021)")}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
                 </div>
               </motion.div>
-
+              
               <motion.div 
                 initial="hidden"
                 whileInView="visible"
@@ -433,12 +432,13 @@ function App() {
                 className="watch-card dark-card"
               >
                 <motion.div style={{ y: yParallax1 }} className="watch-img-container">
-                  <img src="/sprite.png" alt="Rolex GMT-Master II Sprite" className="dark-img-filter" style={{ mixBlendMode: 'screen' }} />
+                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#8b0000', color: '#fff', padding: '0.3rem 1rem', borderRadius: '4px', fontWeight: 'bold', zIndex: 10, letterSpacing: '0.1em'}}>{t.sold}</div>
+                  <img src="/daytona.png" alt="Rolex Daytona Panda" className="dark-img-filter" style={{ opacity: 0.4 }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
-                  <h3>{t.watch3_title}</h3>
-                  <p className="watch-brand">{t.watch3_brand}</p>
-                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch3_title)}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
+                  <h3>{t.watch1_title}</h3>
+                  <p className="watch-brand">{t.watch1_brand}</p>
+                  <span className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', color: '#888', cursor: 'not-allowed'}}>{t.sold}</span>
                 </div>
               </motion.div>
 
@@ -453,12 +453,13 @@ function App() {
                 className="watch-card offset-card dark-card"
               >
                 <motion.div style={{ y: yParallax2 }} className="watch-img-container">
-                  <img src="/daytona.png" alt="Rolex Daytona Panda" className="dark-img-filter" />
+                  <div style={{position: 'absolute', top: '1rem', right: '1rem', background: '#8b0000', color: '#fff', padding: '0.3rem 1rem', borderRadius: '4px', fontWeight: 'bold', zIndex: 10, letterSpacing: '0.1em'}}>{t.sold}</div>
+                  <img src="/datejust.png" alt="Rolex Datejust 41" className="dark-img-filter" style={{ opacity: 0.4 }} />
                 </motion.div>
                 <div className="watch-info glass-info-dark">
-                  <h3>{t.watch4_title}</h3>
-                  <p className="watch-brand">{t.watch4_brand}</p>
-                  <a href={`https://wa.me/33788408004?text=${encodeURIComponent("Salut, j'aimerais plus d'infos sur la montre " + t.watch4_title + " (2021)")}`} target="_blank" rel="noopener noreferrer" className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center'}}>{t.btn_request} <ChevronRight size={16}/></a>
+                  <h3>{t.watch2_title}</h3>
+                  <p className="watch-brand">{t.watch2_brand}</p>
+                  <span className="watch-link btn-text" style={{padding:0, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', color: '#888', cursor: 'not-allowed'}}>{t.sold}</span>
                 </div>
               </motion.div>
             </div>
@@ -477,7 +478,7 @@ function App() {
             <div className="link-group">
               <h4>{t.footer_contact}</h4>
               <p>concierge@zarya.fr</p>
-              <p>+33 7 88 40 80 04</p>
+              <p>+33 6 26 78 98 39</p>
             </div>
             <div className="link-group">
               <h4>{t.footer_links}</h4>
@@ -489,7 +490,7 @@ function App() {
       </footer>
 
       <a 
-        href="https://wa.me/33788408004" 
+        href="https://wa.me/33626789839" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="whatsapp-float"
